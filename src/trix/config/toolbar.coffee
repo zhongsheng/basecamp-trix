@@ -1,4 +1,8 @@
 {lang} = Trix.config
+      # <span class="trix-button-group trix-button-group--text-tools" data-trix-button-group="text-tools">
+      #   <button type="button" class="trix-button trix-button--icon trix-button--icon-image" data-trix-attribute="attachment" data-trix-action="image" data-trix-key="" title="#{lang.image}" tabindex="-1">#{lang.image}</button>
+      # </span>
+
 
 Trix.config.toolbar =
   getDefaultHTML: -> """
@@ -8,6 +12,9 @@ Trix.config.toolbar =
         <button type="button" class="trix-button trix-button--icon trix-button--icon-italic" data-trix-attribute="italic" data-trix-key="i" title="#{lang.italic}" tabindex="-1">#{lang.italic}</button>
         <button type="button" class="trix-button trix-button--icon trix-button--icon-strike" data-trix-attribute="strike" title="#{lang.strike}" tabindex="-1">#{lang.strike}</button>
         <button type="button" class="trix-button trix-button--icon trix-button--icon-link" data-trix-attribute="href" data-trix-action="link" data-trix-key="k" title="#{lang.link}" tabindex="-1">#{lang.link}</button>
+      </span>
+      <span class="trix-button-group trix-button-group--text-tools" data-trix-button-group="text-tools">
+                <input type="file" id="trix-image-upload" name="ice-cream" onchange="document.querySelector('trix-editor').editor.insertFile(this.files[0])" class="trix-button trix-button--icon trix-button--icon-image" title="#{lang.image}" tabindex="-1"></input>
       </span>
 
       <span class="trix-button-group trix-button-group--block-tools" data-trix-button-group="block-tools">
